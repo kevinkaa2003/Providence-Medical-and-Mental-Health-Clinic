@@ -1,0 +1,81 @@
+.fade-in {
+animation: fadeInAnimation 3s ease-in-out;
+}
+
+@keyframes fadeInAnimation {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+.expand-width {
+    animation: expandWidth 1.5s ease-in-out forwards;
+}
+
+    @keyframes expandWidth {
+from {
+    width: 0;
+}
+to {
+    width: 75%;
+}
+}
+
+.slideshow { 
+    position: relative;
+    display: flex;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+    margin-top: 13%;
+    background-color: transparent;
+
+    
+}
+.slideshow button {
+    z-index: 1;
+}
+.slideshowtable {
+    width: 100%;
+    border-collapse: collapse;
+
+   
+}
+.slideshowtable td {
+    width: 100%;
+}
+.slideshowtable img {
+    transform: scale(2.3, 1.5);
+    
+    
+}
+.message {
+    position: absolute;
+    background: rgba(82, 90, 253, 0.935);
+    bottom: 100px;
+    left: 25px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 50px;
+    overflow: hidden; /* Ensure the animation looks smooth */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 0; /* Start with zero width */
+    transition: width 1.5s ease-in-out;
+}
+.orderbuttoncontainer {
+    display: block;
+
+}
+.orderbutton {
+    display: block;
+
+}
+

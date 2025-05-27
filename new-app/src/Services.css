@@ -1,0 +1,57 @@
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-bottom: 17%;
+    background: url('trees.jpg') no-repeat center;
+    background-size: cover;
+   
+  
+}
+.servicesoverview {
+    border-right: 2px solid white;
+    padding-right: 50px;
+}
+.servicesoverview strong {
+    color:rgb(96, 220, 245);
+    font-size: 30px;
+}
+.servicesmain {
+    display:flex;
+    justify-content: space-between;
+    gap: 200px;
+    text-align: left;
+    font-size: 20px;
+    width: 60vw;
+    background-color: rgb(51, 61, 254, 0.5);
+    color: white;
+    padding: 100px;
+}
+.serviceslist {
+    width: 100%;
+    color: white;
+    padding-right: 200px;
+   
+}
+.serviceslist ul {
+    list-style-type: disc;
+    text-align: left;
+    font-size: 25px;
+
+}
+.appointmentbuttoncontainer {
+    display: flex;
+    margin-left: 0 auto;
+}
+.appointmentbutton {
+    background-color:rgb(38, 0, 251);
+   
+    
+}
+.appointmentbutton a {
+    color:white;
+}
+.appointmentbutton:hover {
+    background-color:rgb(96, 220, 245);
+}
