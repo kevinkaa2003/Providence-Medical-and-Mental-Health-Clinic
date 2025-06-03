@@ -6,8 +6,7 @@
     margin-top: 15%;
     background-repeat: no-repeat;
     background-size: 100%;
-   
-    
+
 }
 
 .welcomecontainer {
@@ -17,21 +16,23 @@
     background-color: none;
     width: 75vw;
     height: 50vh;
-   
+
 }
 .video {
     display: flex;
     flex-direction: column; /*Stack elements vertically */;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     text-align: center;
     color: black;
     height: 100%; /* Ensure it uses the height of its parent */
     width: 100%; /* Ensure it uses the width of its parent */
     font-family:'Courier New', Courier, monospace;
+
 }
 .video video {
     scale: 1.3;
+    border-radius: 15px;
 }
 .video strong {
     margin-top: 50px;
@@ -40,8 +41,8 @@
 .profilepicture {
     min-width: 100%;
     min-height: 100%;
-    
-   
+
+
 }
 .welcomeparagraph {
     display: flex;
@@ -63,7 +64,7 @@
 }
 .welcomeparagraph img {
     scale: 0.75;
-    
+
 }
 .welcomeparagraph1 {
     color: rgba(38, 254, 247, 0.927);
@@ -71,7 +72,7 @@
     margin-left: 1vw;
     text-align: center;
     text-decoration: none;
-    
+
 }
 .welcomeparagraph2 {
     color: rgba(71, 38, 254, 0.927);
@@ -90,6 +91,7 @@
 }
 .welcomeparagraph button {
     background-color:rgb(38, 0, 251);
+    margin-left: 10%;
 
 }
 

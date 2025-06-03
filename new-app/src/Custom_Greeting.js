@@ -6,16 +6,9 @@ import providervideo2 from './providervideo2.mp4';
 import providervideo3 from './providervideo3.mp4';
 import logo from './providence medical logo.jpg';
 
+//Home greeting component
 const HomeGreeting = () => {
     const navigate = useNavigate();
-    
-    const goToContact = () => {
-        navigate("/Contact");
-    };
-
-    const goToPortfolio = () => {
-        navigate("/Portfolio");   
-    };
 
     //Video Sources
     const videoSources = [providervideo1, providervideo2, providervideo3];
@@ -26,12 +19,11 @@ const HomeGreeting = () => {
         setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videoSources.length);
     };
 
-    return (  
+    return (
         <>
         <div className="homegreeting">
             <div className="welcomecontainer">
                 <div className="welcomeparagraph">
-                    
                     <div className="welcomeparagraph1">
                         <p>Providence Medical and
                             <br/> Mental Health Clinic</p>
@@ -46,20 +38,18 @@ const HomeGreeting = () => {
                     </div>
                     <br/>
                     <div className="welcomebuttons">
-            
                         <button><a href="http://provider.kareo.com/dr-esther-eke-huber#?view=booking">Schedule an Appointment</a></button>
                     </div>
-    
                 </div>
                 <div className="video">
-                    <video src={videoSources[currentVideoIndex]} autoPlay muted playsInline onEnded={handleVideoEnd}/>            
+                    <video src={videoSources[currentVideoIndex]} autoPlay muted playsInline onEnded={handleVideoEnd}/>
                 </div>
             </div>
-            
-         
+
+
         </div>
         </>
     );
 }
- 
+
 export default HomeGreeting;

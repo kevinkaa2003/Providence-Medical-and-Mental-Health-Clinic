@@ -13,27 +13,16 @@ import Services from './Services.js';
 import Reviews from './Reviews.js';
 import { DataProvider } from './DataProvider.js';
 
-
+//Home component
 const Home = () => {
-
-    const servicesRef = useRef(null);
-
-    const servicesScroll = () => {
-        servicesRef.current.scrollIntoView({ behavior: 'smooth' })
-    } //???
 
     return (
         <>
         <DataProvider>
             <Navbar/>
-        
             <Slideshow/>
-          
-        
             <HomeGreeting/>
-            <div ref={servicesRef}>
-                <Services/>
-            </div>
+            <Services/>
             <MeetProviders/>
             <br/>
             <br/>
@@ -44,8 +33,8 @@ const Home = () => {
             <Insurances/>
             <CustomFooter/>
         </DataProvider>
-        </> 
+        </>
     );
 }
- 
+
 export default Home;

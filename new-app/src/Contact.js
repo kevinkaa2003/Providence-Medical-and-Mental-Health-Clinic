@@ -8,6 +8,7 @@ import ContactWidget from './Contact_Widget.js';
 import Insurances from './Insurance_Display.js';
 import { DataProvider } from './DataProvider.js';
 
+//Contact component
 const Contact = () => {
   return (
     <>

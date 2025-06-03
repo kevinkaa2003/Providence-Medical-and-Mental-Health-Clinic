@@ -2,17 +2,17 @@ import './Custom_Footer.css';
 import { useNavigate } from 'react-router-dom';
 import logo from './providence medical logo.jpg';
 
-
-
+//Custom footer component
 const CustomFooter = () => {
     const navigate = useNavigate();
     const goToContact = () => navigate('/Contact');
-    
+    const goToHome = () => navigate('/');
+
     return (
         <>
         <div className="mainfooter">
             <div className="footerlogo">
-                <img src={logo}/>
+                <img src={logo} onClick={goToHome}/>
             </div>
             <div className="footercontact">
                 <button className="dropdowncontactbtn" onClick={goToContact}><strong>CONTACT</strong>
@@ -38,7 +38,7 @@ const CustomFooter = () => {
                             <br/>
                             <a href="#" className="instagramfooter">Instagram</a>
                         </div>
-                        
+
                     </div>
             </div>
             <div className='map'>
@@ -46,8 +46,7 @@ const CustomFooter = () => {
             </div>
         </div>
         </>
-
       );
 }
- 
+
 export default CustomFooter;

@@ -6,8 +6,8 @@
     margin-bottom: 17%;
     background: url('trees.jpg') no-repeat center;
     background-size: cover;
-   
-  
+
+
 }
 .servicesoverview {
     border-right: 2px solid white;
@@ -27,12 +27,13 @@
     background-color: rgb(51, 61, 254, 0.5);
     color: white;
     padding: 100px;
+    border-radius: 15px;
 }
 .serviceslist {
     width: 100%;
     color: white;
     padding-right: 200px;
-   
+
 }
 .serviceslist ul {
     list-style-type: disc;
@@ -46,8 +47,8 @@
 }
 .appointmentbutton {
     background-color:rgb(38, 0, 251);
-   
-    
+
+
 }
 .appointmentbutton a {
     color:white;

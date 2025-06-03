@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './Custom_Navbar.css';
 import { useNavigate } from 'react-router-dom';
 import logo from './providence medical logo.jpg';
- 
 
+//Navbar component
 const Navbar = () => {
 
+    //Declare variables
     const[searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const[isInputFocused, setIsInputFocused] = useState(false);
@@ -13,29 +14,29 @@ const Navbar = () => {
     const searchResultsDiv = document.getElementById('search-results');
 
 
-
+    //Searchbar event handling
     useEffect( () => {
         const searchBar = document.getElementById('searchbar');
         const searchResultsDiv = document.getElementById('search-results');
-          
+
         const handleInput = (event) => {
             if (isInputFocused) {
                if (event.target.value.length > 0) {
                     searchResultsDiv.style.display = 'block';
                }
-            
+
                 else {
                     searchResultsDiv.style.display = 'none';
                 }
             } else {
                 searchResultsDiv.style.display = 'none';
             }
-            
+
         };
-         
+
         const handleFocus = () => {
             setIsInputFocused(true); //Set focus flag
-           
+
             if(searchTerm.length > 0) {
                 searchResultsDiv.style.display = 'block';
             }
@@ -49,17 +50,19 @@ const Navbar = () => {
 
         searchBar.addEventListener('input', handleInput);
         searchBar.addEventListener('focus', handleFocus);
-        
+
     }, [isInputFocused, searchTerm, searchResults]);
 
 
-   
+
     //Search Function
     function search(event) {
 
+        //Input handling
         const input = event.target.value.toLowerCase();
-        setSearchTerm(input); //Update the state
-       
+        setSearchTerm(input);
+
+        //Possible search terms
         const searchItems = [
             { name: "Home", url: "/" },
             { name: "Contact", url: "/Contact" },
@@ -81,15 +84,16 @@ const Navbar = () => {
             { name: "Sleep Disorder", url: "/#services" },
             { name: "Sexual Addiction", url: "/#services" },
             { name: "Family Medicine", url: "/#services" }
-            
+
          ];
-         
+
+         //Filter search Items
          const filteredSearch = searchItems.filter(searchItems => searchItems.name.toLowerCase().includes(input));
-            
+
          setSearchResults(filteredSearch);
     };
-    
-    
+
+    //Render search results function
     function renderSearchResults(searchResults, searchTerm) {
         //Check if there are search results
         if (searchResults.length > 0) {
@@ -98,9 +102,9 @@ const Navbar = () => {
                     <a key={index} onClick={() => navigate(result.url)}>{result.name}</a>
                 )
             });
-        }   
-        
-        
+        }
+
+
         //Check if the search term is present and no results were found
         else if (searchTerm.length > 0) {
             return (
@@ -114,10 +118,10 @@ const Navbar = () => {
     };
 
 
-    
 
-    //Navigation 
-    const navigate = useNavigate(); 
+
+    //Navigation
+    const navigate = useNavigate();
 
     const goToHome = () => {
         navigate('/')
@@ -137,28 +141,28 @@ const Navbar = () => {
     };
 
 
-    return ( 
+    return (
 
-        <> 
+        <>
         <div className="navbar">
             <div className = "navbarname">
                 <a href=""><img src={logo} style={{verticalAlign: 'middle', height: '350px', width: '350px'}}/></a>{/*Logo or Header Image*/}
-             
             </div>
             <div className="navbarcomponents">
                 <div className="search"> {/*Search Bar */}
-                    <input id="searchbar" 
-                    value = {searchTerm}
-                    onChange= {search}
-                    type="text"
-                    placeholder="Search..."/>
-                    <div className="search-results" id="search-results"> 
+                    <input id="searchbar"
+                        className='searchbar'
+                        value = {searchTerm}
+                        onChange= {search}
+                        type="text"
+                        placeholder="Search..."/>
+                    <div className="search-results" id="search-results">
                         {renderSearchResults(searchResults, searchTerm)}
                     </div>
                 </div>
                 <div className = "navbarhome">
                     <button className = "navbarhomebtn" onClick={goToHome}>
-                        <a > 
+                        <a >
                         <strong>HOME</strong>
                         </a>
                     </button>
@@ -187,7 +191,6 @@ const Navbar = () => {
                         <a href="#" className="instagramnav">Instagram</a>
                     </div>
                 </div>
-                
                 <div className="dropdownservices">
                     <button className='dropdownservicesbtn' onClick={goToServices}><a><strong>SERVICES</strong></a></button>
                     <div className="dropdowncontentservices">
@@ -209,9 +212,7 @@ const Navbar = () => {
             </div>
         </div>
         </>
-
      );
 }
- 
-export default Navbar;
 
+export default Navbar;

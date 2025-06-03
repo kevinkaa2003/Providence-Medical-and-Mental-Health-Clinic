@@ -3,13 +3,13 @@ import './ProviderIntro.css';
 import esther from './dresther.jpeg';
 import klein from './drklein.png';
 import shalomov from './drshalomov.jpeg';
-import mountain from './mountain.jpg';
 
+
+//Provider component
 const MeetProviders = () => {
-    return ( 
+    return (
 
-            <>
-            
+        <>
            <div className="providermain">
             <div className='providertitle'>
                     <strong>Meet the Providers</strong> {/*Center/Style Later*/}
@@ -58,7 +58,7 @@ const MeetProviders = () => {
                             <br/>
                             <br/>
                             <p>
-                            Dr. Andrey Shalomov, MD, MPH, is an American Board – Certified Psychiatrist and Neurologist with about 10 years of experience in Psychiatry.  He provides assessment, diagnoses, and treatment to Children, Adolescents, and Adults with a wide range of mental health conditions in Texas. 
+                            Dr. Andrey Shalomov, MD, MPH, is an American Board – Certified Psychiatrist and Neurologist with about 10 years of experience in Psychiatry.  He provides assessment, diagnoses, and treatment to Children, Adolescents, and Adults with a wide range of mental health conditions in Texas.
                             </p>
                         </div>
                         <br/>
@@ -79,7 +79,7 @@ const MeetProviders = () => {
                         <div className='provider3paragraph'>
                             <br/>
                             <p>
-                            Dr. Michael Klein, MD is a Family and ER Medicine Specialist in TX and has over 30 years of experience in the medical field. He provides primary care and treatment of acute and chronic illnesses including work-related injuries. 
+                            Dr. Michael Klein, MD is a Family and ER Medicine Specialist in TX and has over 30 years of experience in the medical field. He provides primary care and treatment of acute and chronic illnesses including work-related injuries.
                             </p>
                         </div>
                         <br/>
@@ -87,10 +87,8 @@ const MeetProviders = () => {
                     </div>
                 </div>
            </div>
-            </>
-
-
+        </>
      );
 }
- 
+
 export default MeetProviders;

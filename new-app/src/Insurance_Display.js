@@ -9,8 +9,9 @@ import medicaid from './medicaid.png';
 import tmhp from './tmhp.png';
 import wellcare from './wellcare.png';
 
+//Insurance component
 const Insurances = () => {
-    return ( 
+    return (
     <>
         <div className="insuranceimages">
             <div className="insurancetitle"><strong>Accepted Insurances</strong></div>
@@ -50,5 +51,5 @@ const Insurances = () => {
     </>
      );
 }
- 
+
 export default Insurances;

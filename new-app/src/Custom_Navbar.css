@@ -31,7 +31,7 @@ to {
 }
 
 .expand-height {
-    animation: expandHeight 1.0s ease-in-out; 
+    animation: expandHeight 1.0s ease-in-out;
 }
 
 a {
@@ -56,15 +56,13 @@ button {
     min-width: 100px;
     padding: 10px;
     font-family: sans-serif;
-    
+
 
 }
 button:hover {
    /* Add Button Effects */
-    
+
 }
-
-
 
 
 /* NAVBAR */
@@ -85,13 +83,13 @@ button:hover {
     font-weight: 200;
     color: rgb(51, 61, 254);
     margin-left: 1%;
-   
+
 }
 .navbarcomponents {
     margin-right: 10%;
     display: flex;
     gap: 100px;
-    
+
 }
 .search {
     display: flex;
@@ -101,11 +99,16 @@ button:hover {
     top: 2.5%;
     bottom: 1220px;
 }
+.searchbar {
+    width: 500px;
+}
 .search-results {
     margin-top: 60px;
+    width: 500px;
     position: absolute;
     z-index: 10;
     background-color: rgb(118, 124, 252);
+    border-radius: 10px;
 }
 .search-results a {
     display: block;
@@ -179,6 +182,7 @@ button:hover {
     background-color: rgb(118, 124, 252);
     min-width: 160px;
     z-index: 1;
+    border-radius: 10px;
 }
 .dropdowncontentservices a {
     color: rgb(3, 23, 253);
@@ -189,46 +193,6 @@ button:hover {
 
 .dropdowncontentservices a:hover{
     color: white;
-}
-
-
-.dropdownabout {
-    position: relative;
-    display: inline-block;
-    font-size: x-large;
-    color:  rgb(51, 61, 254);
-}
-.dropdownaboutbtn {
-    font-size: x-large;
-    font-weight: 200;
-    color: rgb(86, 198, 249);
-    text-decoration: none;
-}
-.dropdownabout:hover .dropdownaboutbtn {
-    scale: 1.2;
-    transition: 0.5s ease-in-out;
-}
-.dropdown-content-about {
-    overflow: hidden;
-    height: 0;
-    transition: height 1.0s ease-in-out;
-    position: fixed;
-    background-color:  rgb(118, 124, 252);
-    min-width: 500px;
-    z-index: 1;
-}
-.dropdown-content-about a {
-    color: rgb(51, 61, 254);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown-content-about a:hover {
-    background-color: transparent;
-}
-.dropdownabout:hover .dropdown-content-about {
-    height: 500px;
-
 }
 
 .history {
@@ -300,7 +264,7 @@ button:hover {
     font-size: large;
     overflow: hidden;
     transition: height 1s ease-out;
-    
+
 }
 .dropdown-content-about .dropdowngoals {
     left: 200px; /* Adjust this value based on your layout */
@@ -332,9 +296,10 @@ button:hover {
     z-index: 1;
     text-align: left;
     padding-left: 50px;
+    border-radius: 10px;
 }
 .dropdown-content-contact a {
-    color:  rgb(51, 61, 254);
+    color:  rgb(0, 13, 255);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -404,7 +369,3 @@ button:hover {
 .instagramnav:hover::after {
     width: 30%;
 }
-
-
-
-

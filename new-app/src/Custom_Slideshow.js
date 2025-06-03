@@ -8,15 +8,14 @@ import trees from './trees.jpg';
 import waterfall from './waterfall.jpg';
 import { useNavigate }from 'react-router-dom';
 
-
-
-
-
+//Slideshow component
 const Slideshow = () => {
 
+    //Declare variables
     const [currentRow, setCurrentRow] = useState(0);
     const rowsRef = useRef([]);
 
+    //Slideshow effect
     useEffect(() => {
         rowsRef.current = document.querySelectorAll("#slideshowtable tr");
         showRow(0);
@@ -24,24 +23,25 @@ const Slideshow = () => {
         return () => clearInterval(interval); //Cleanup on unmount
     }, []);
 
+
+    //Show row function
     function showRow(index) {
         rowsRef.current.forEach((row, i) => {
             const message = row.querySelector(".message");
-           
+
 
             if (row) {
                 row.style.display = i === index ? "table-row" : "none";
-                row.classList.toggle("fade-in", i === index); 
+                row.classList.toggle("fade-in", i === index);
             }
             if (message) {
                 message.classList.toggle("expand-width", i === index);
 
             }
-
-            
         });
     }
 
+    //Next row function
     function nextRow() {
         setCurrentRow((prev) => {
             const newIndex = (prev + 1 ) % rowsRef.current.length;
@@ -50,13 +50,7 @@ const Slideshow = () => {
         });
     }
 
-    const Navigate = useNavigate();
-
-    const goToContact = () => {
-        Navigate('/Contact')
-    };
-
-    return ( 
+    return (
         <>
         <div className="slideshow" id="slideshow1">
             <table id="slideshowtable" className="slideshowtable">
@@ -65,29 +59,29 @@ const Slideshow = () => {
                         <td>
                             <img src={beach}/>
                             <div className="message">Welcome to Providence Medical and Mental Health!</div>
-                            
+
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <img src={waterfall}/>
                             <div className="message">We provide care and treatment for a range of different mental health conditions.</div>
-                            
+
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <img src={bridge2}/>
                             <div className="message">Contact us today to schedule an appointment.</div>
-                            
+
                         </td>
                     </tr>
                 </tbody>
-                
+
             </table>
         </div>
         </>
      );
 }
- 
+
 export default Slideshow;

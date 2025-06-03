@@ -2,14 +2,17 @@ import React, { useEffect, useState, useRef } from 'react';
 import './Contact_Widget.css';
 import emailjs from '@emailjs/browser';
 
-
+//Contact widget component
 const ContactWidget = () => {
-    const form = useRef(); 
+    const form = useRef();
 
+
+    //Email.js initilization
     useEffect (() => {
         emailjs.init("5xgP6vguaJHGTQ-E4");
     }, []);
 
+    //Send email function
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -23,10 +26,10 @@ const ContactWidget = () => {
                 console.log('Failed...', error);
                 alert('Failed to send email. Please try again.');
             });
-    };   
+    };
 
-    
-    return ( 
+
+    return (
 
          <>
          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -57,7 +60,7 @@ const ContactWidget = () => {
                            <br/>
                             <li>
                                 <div className="content">
-                                    <strong>Call:</strong> +1 (281)-920-0344 
+                                    <strong>Call:</strong> +1 (281)-920-0344
                                 </div>
                             </li>
                         </ul>
@@ -95,5 +98,5 @@ const ContactWidget = () => {
 
      );
 }
- 
+
 export default ContactWidget;
